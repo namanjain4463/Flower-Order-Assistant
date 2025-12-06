@@ -1,10 +1,18 @@
-# Flower Order Assistant
+# Flower Order Assistant 🌸🤖
+
+[![GitHub](https://img.shields.io/badge/GitHub-Flower--Order--Assistant-blue?logo=github)](https://github.com/namanjain4463/Flower-Order-Assistant)
+[![Python](https://img.shields.io/badge/Python-3.8+-blue?logo=python)](https://www.python.org/)
+[![LangChain](https://img.shields.io/badge/LangChain-0.3.9-green)](https://www.langchain.com/)
+[![Neo4j](https://img.shields.io/badge/Neo4j-5.27.0-blue)](https://neo4j.com/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.35.0-red)](https://streamlit.io/)
 
 An AI-powered robotic flower picking and ordering system that combines natural language processing, computer vision, and robotic control to autonomously fulfill flower orders.
 
 ## 🎯 Overview
 
 This system allows users to place flower orders in natural language through a chatbot web interface. The AI agent processes the order, generates a bill of materials from a Neo4j knowledge graph, and controls a UR5 robotic arm to physically pick and arrange the flowers.
+
+**🔗 Repository**: [github.com/namanjain4463/Flower-Order-Assistant](https://github.com/namanjain4463/Flower-Order-Assistant)
 
 ### Key Features
 
@@ -84,9 +92,8 @@ See [requirements.txt](requirements.txt) for the complete list. Main dependencie
 ### 1. Clone the Repository
 
 ```bash
-cd ~/Desktop
-git clone <repository-url> chatbot
-cd chatbot
+git clone https://github.com/namanjain4463/Flower-Order-Assistant.git
+cd Flower-Order-Assistant
 ```
 
 ### 2. Create Virtual Environment
@@ -562,21 +569,39 @@ streamlit run bot.py
 - **Concurrency**: Current design handles one order at a time
 - **Storage**: CSV files and images accumulate - clean periodically
 
-## 📄 License
-
-[Add your license here]
-
 ## 🤝 Contributing
 
-[Add contribution guidelines here]
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ## 📧 Support
 
 For issues and questions:
+- 🐛 **Report bugs**: [GitHub Issues](https://github.com/namanjain4463/Flower-Order-Assistant/issues)
+- 📖 **Documentation**: Check [Troubleshooting](#troubleshooting) section
+- 🏗️ **Architecture**: Review [ARCHITECTURE.md](ARCHITECTURE.md) for system details
+- 💬 **Discussions**: [GitHub Discussions](https://github.com/namanjain4463/Flower-Order-Assistant/discussions)
 
-- Check [Troubleshooting](#troubleshooting) section
-- Review [ARCHITECTURE.md](ARCHITECTURE.md) for system details
-- [Add contact/support information]
+## 🙏 Acknowledgments
+
+- **LangChain** - For the powerful agent framework
+- **Neo4j** - For the knowledge graph database
+- **OpenAI** - For GPT models and embeddings
+- **Universal Robots** - For UR5 robotic arm platform
+- **Ultralytics** - For YOLO object detection
+
+## ⭐ Star History
+
+If you find this project useful, please consider giving it a star! ⭐
+
+---
+
+**Repository**: [github.com/namanjain4463/Flower-Order-Assistant](https://github.com/namanjain4463/Flower-Order-Assistant)
 
 ---
 
