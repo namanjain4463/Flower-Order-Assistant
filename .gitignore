@@ -25,15 +25,11 @@ ENV/
 
 # Streamlit
 .streamlit/secrets.toml
+.env
 
-# Neo4j credentials
-test_connection.py
-
-# Model files (large files)
-*.pth
-*.pt
-best_yolo_CLEAN.pt
-flower_joint_model_CLEAN.pth
+# Environment variables
+*.env
+!.env.example
 
 # Generated files
 bill_of_order_*.csv
