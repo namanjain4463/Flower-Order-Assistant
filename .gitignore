@@ -25,11 +25,9 @@ ENV/
 
 # Streamlit
 .streamlit/secrets.toml
-.env
 
-# Environment variables
-*.env
-!.env.example
+# Neo4j credentials
+test_connection.py
 
 # Generated files
 bill_of_order_*.csv

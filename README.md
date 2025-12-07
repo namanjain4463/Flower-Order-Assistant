@@ -132,16 +132,16 @@ sudo systemctl start pigpiod
 
 ### 5. Download Model Files
 
-The large model files are included in this repository:
+Ensure these files are in the project root:
 
-- `flower_joint_model_CLEAN.pth` - MLP joint angle predictor (included)
-- `best_yolo_CLEAN.pt` - YOLO flower detection model (you may need to download separately if not present)
+- `flower_joint_model_CLEAN.pth` - MLP joint angle predictor
+- `best_yolo_CLEAN.pt` - YOLO flower detection model
 
-> **Note**: If the YOLO model is not included, you'll need to train it using your specific flower dataset or obtain it separately.
+> **Note**: These models should be provided separately or trained using your specific setup.
 
 ## ⚙️ Configuration
 
-### Method 1: Using Streamlit Secrets (Recommended)
+### 1. Streamlit Secrets
 
 Create `.streamlit/secrets.toml` in the project directory:
 
@@ -161,28 +161,6 @@ NEO4J_URI = "neo4j+s://your-instance.databases.neo4j.io"
 NEO4J_USERNAME = "neo4j"
 NEO4J_PASSWORD = "your-neo4j-password"
 ```
-
-> **Important**: Never commit `secrets.toml` to version control. It's already in `.gitignore`.
-
-### Method 2: Using Environment Variables (Alternative)
-
-Copy the example file and edit it:
-
-```bash
-cp .env.example .env
-```
-
-Edit `.env` with your credentials:
-
-```bash
-OPENAI_API_KEY=sk-your-openai-api-key-here
-OPENAI_MODEL=gpt-4
-NEO4J_URI=neo4j+s://your-instance.databases.neo4j.io
-NEO4J_USERNAME=neo4j
-NEO4J_PASSWORD=your-neo4j-password
-```
-
-> **Important**: Never commit `.env` to version control. It's already in `.gitignore`.
 
 ### 2. Neo4j Database Setup
 
@@ -302,7 +280,7 @@ cap = cv2.VideoCapture(0)  # Change 0 to your camera index
 ### 1. Test Neo4j Connection
 
 ```bash
-streamlit run test_connection.py
+python3 test_connection.py
 ```
 
 Expected output:
@@ -310,8 +288,6 @@ Expected output:
 ```
 Connection successful!
 ```
-
-> **Note**: `test_connection.py` now uses secrets from `.streamlit/secrets.toml` for security.
 
 ### 2. Start the Streamlit App
 
